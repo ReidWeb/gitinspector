@@ -75,7 +75,7 @@ class ResponsibilitiesOutput(Outputable):
 				for j, entry in enumerate(responsibilities):
 					resp_xml += "<div" + (" class=\"odd\">" if j % 2 == 1 else ">") + entry[1] + \
 					            " (" + str(entry[0]) + " eloc)</div>"
-					if j >= 9:
+					if j >= 1000:
 						break
 
 				resp_xml += "</div>"
@@ -104,7 +104,7 @@ class ResponsibilitiesOutput(Outputable):
 					resp_json += "\t\t\t\t\t\"rows\": " + str(entry[0]) + "\n"
 					resp_json += "\t\t\t\t},"
 
-					if j >= 9:
+					if j >= 1000:
 						break
 
 				resp_json = resp_json[:-1]
@@ -134,7 +134,7 @@ class ResponsibilitiesOutput(Outputable):
 					resp_xml += "\t\t\t\t\t\t<rows>" + str(entry[0]) + "</rows>\n"
 					resp_xml += "\t\t\t\t\t</file>\n"
 
-					if j >= 9:
+					if j >= 1000:
 						break
 
 				resp_xml += "\t\t\t\t</files>\n"
